@@ -19,7 +19,7 @@ import javafx.util.Duration;
 
 /**
  * The Tetris Application, which contains the board and a message label.
- * @author pipWolfe
+ * @author Andre Hansen
  */
 public class Tetris extends Application {
 
