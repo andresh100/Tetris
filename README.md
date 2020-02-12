@@ -22,4 +22,4 @@ Classic recreation of the infamous Tetris game. Coded in Java.
 * Download Eclipse, or any other Java IDE
 * Import the JavaFx files from: https://gluonhq.com/products/javafx/
 * Follow the docs on how to import from the eclipse tab from: https://openjfx.io/openjfx-docs/
-* Run BeeWindow.java file
+* Run Tetris.java file
