@@ -19,7 +19,7 @@ import javafx.scene.shape.Rectangle;
  * The tetris board x and y locations of the Square are IntegerProperties. You
  * can either
  * 
- * @author pipWolfe
+ * @author Andre Hansen
  */
 public class TetrisSquare {
 	// The shape for the square

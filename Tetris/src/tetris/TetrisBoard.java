@@ -17,7 +17,7 @@ import javafx.scene.paint.Color;
 /**
  * A Pane in which tetris squares can be displayed.
  * 
- * @author pipWolfe
+ * @author Andre Hansen
  */
 public class TetrisBoard extends Pane {
 	// The size of the side of a tetris square

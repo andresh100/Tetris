@@ -19,7 +19,7 @@ import javafx.util.Duration;
 
 /**
  * The Tetris Application, which contains the board and a message label.
- * @author pipWolfe
+ * @author Andre Hansen
  */
 public class Tetris extends Application {
 
@@ -100,6 +100,7 @@ public class Tetris extends Application {
      * Sets up key events for the arrow keys and space bar. All keys send 
      * messages to the game, which should react appropriately.
      */
+    Boolean paused = false;
     private void setUpKeyPresses() {
         tetrisBoard.setOnKeyPressed(e -> {
             switch (e.getCode()) {
@@ -118,7 +119,17 @@ public class Tetris extends Application {
                 case SPACE:
                     game.drop();
                     break;
-
+                case P:
+                	if(paused == false) {
+                		this.pause();
+                		setMessage("Paused!");
+                		paused = true;
+                	} else {
+                		this.resume();
+                		setMessage("Game has started! - Score:" + TetrisGame.score);
+                		paused = false;
+                	}
+                    break;
             }
         });
         tetrisBoard.requestFocus(); // board is focused to receive key input

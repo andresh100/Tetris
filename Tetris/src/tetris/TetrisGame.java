@@ -11,10 +11,10 @@ import javafx.scene.paint.Color;
 /**
  * This should be implemented to include your game control.
  * 
- * @author pipWolfe
+ * @author Andre Hansen
  */
 public class TetrisGame {
-	private int score = 0;
+	public static int score = 0;
 	private boolean stop = false;
 	private Shapes shapes;
 	private final Tetris tetrisApp;
@@ -24,10 +24,6 @@ public class TetrisGame {
 	private TetrisSquare[][] squares = new TetrisSquare[TetrisBoard.Y_DIM_SQUARES][TetrisBoard.X_DIM_SQUARES];
 	public int[][] squaresInt = new int[TetrisBoard.X_DIM_SQUARES][TetrisBoard.Y_DIM_SQUARES];
 
-	// private ArrayList<ArrayList<TetrisSquare>> squarez = new
-	// ArrayList<ArrayList<TetrisSquare>>();
-	// private boolean addSha = shapes.getAddSquare();
-	//
 	/**
 	 * Initialize the game. Remove the example code and replace with code that
 	 * creates a random piece.
@@ -43,38 +39,9 @@ public class TetrisGame {
 		// Take this out and construct your random piece here.
 		this.tb = board;
 		shapes = new Shapes(board);
-		// if (shapes.getAddSquare() == true){
-		// shapes = new Shapes(board);
-		// }
 		this.tetrisApp = tetrisApp;
-		// if (shapes.getAddSquare() == true){
-		// shapes = new Shapes(board);
-		// }
-		// You can use this to show the score, etc.
 		tetrisApp.setMessage("Game has started! - Score:" + score);
-		// if (shapes.getAddSquare() == true ||
-		// squares[Shapes.getSquare1().getY()][Shapes.getSquare1().getX()] !=
-		// null ||
-		// squares[Shapes.getSquare2().getY()][Shapes.getSquare2().getX()] !=
-		// null ||
-		// squares[Shapes.getSquare3().getY()][Shapes.getSquare3().getX()] !=
-		// null ||
-		// squares[Shapes.getSquare4().getY()][Shapes.getSquare4().getX()] !=
-		// null){
-		// squares[Shapes.getSquare1().getY()-1][Shapes.getSquare1().getX()] =
-		// Shapes.getSquare1();
-		// squares[Shapes.getSquare2().getY()-1][Shapes.getSquare2().getX()] =
-		// Shapes.getSquare2();
-		// squares[Shapes.getSquare3().getY()-1][Shapes.getSquare3().getX()] =
-		// Shapes.getSquare3();
-		// squares[Shapes.getSquare4().getY()-1][Shapes.getSquare4().getX()] =
-		// Shapes.getSquare4();
-		// Shapes.getSquare1().setColor(Color.LIGHTGREY);
-		// Shapes.getSquare2().setColor(Color.GREY);
-		// Shapes.getSquare3().setColor(Color.GREY);
-		// Shapes.getSquare4().setColor(Color.GREY);
-		// shapes = new Shapes(tb);
-		// }
+
 	}
 
 	/**
@@ -180,7 +147,6 @@ public class TetrisGame {
 		if (end() == true) {
 
 		} else {
-			System.out.println("left key was pressed!");
 			shapes.moveLeft();
 		}
 	}
@@ -191,7 +157,6 @@ public class TetrisGame {
 	void right() {
 		if (end() == true) {
 		} else {
-			System.out.println("right key was pressed!");
 			shapes.moveRight();
 		}
 	}
@@ -202,7 +167,6 @@ public class TetrisGame {
 	void drop() {
 		if (end() == true || stop == true) {
 		} else {
-			System.out.println("drop key was pressed!");
 			shapes.moveDown();
 		}
 	}
@@ -214,7 +178,6 @@ public class TetrisGame {
 		if (end() == true) {
 
 		} else {
-			System.out.println("rotate left key was pressed!");
 			shapes.rotateDown();
 		}
 	}
@@ -226,7 +189,6 @@ public class TetrisGame {
 		if (end() == true) {
 
 		} else {
-			System.out.println("rotate right key was pressed!");
 			shapes.rotateUp();
 		}
 	}
