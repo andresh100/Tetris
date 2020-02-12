@@ -14,7 +14,7 @@ import javafx.scene.paint.Color;
  * @author Andre Hansen
  */
 public class TetrisGame {
-	private int score = 0;
+	public static int score = 0;
 	private boolean stop = false;
 	private Shapes shapes;
 	private final Tetris tetrisApp;
