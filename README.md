@@ -1,6 +1,6 @@
 # Tetris
 <img src="/Assets/Example.gif" >
-Classic recreation of the infamous Tetris game. Coded in Java.
+Classic recreation of the famous Tetris game. Coded in Java.
 
 ## Features
 
